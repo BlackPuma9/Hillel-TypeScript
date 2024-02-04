@@ -24,25 +24,53 @@ greet('Alex')
 greet(null)
 greet(undefined)
 
-function printUser(user: { name: string; age: number }):void {
-    console.log(`User name: ${user.name}`)
-    console.log(`User age: ${user.age}`)
-}
-printUser({ name: 'Yuliia', age: 70 })
-
 let value: any = null
+
 console.log(value)
 value = {key1: 'one'}
 console.log(value)
 value = 2
 console.log(value)
-
 let outcome: unknown
 outcome = 'Result'
 if (typeof outcome === 'string') {
     console.log(outcome.toUpperCase())
 }
 
+function printUser(user: { name: string; age: number }):void {
+    console.log(`User name: ${user.name}`)
+    console.log(`User age: ${user.age}`)
+}
+printUser({ name: 'Yuliia', age: 70 })
 
+interface Person {
+    name: string
+    age: number
+    hobbies: Array<string>
+}
 
+const person: Person = {
+    name: 'Anna',
+    age: 45,
+    hobbies: ['programming', 'sport' ]
+}
 
+console.log(`Hi, ${person.name}. You are ${person.age}. Your hobbies: ${person.hobbies}`);
+
+const sum = (num1: number, num2: number): number => {
+    return num1 + num2
+}
+console.log(`Results of sun fn: ${sum(10,20)}`)
+
+enum DayOfWeek {
+    Sunday,
+    Monday ,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+}
+const date = new Date()
+const currentDay =  DayOfWeek[date.getDay()]
+console.log(`Today is ${currentDay}`)

@@ -19,11 +19,6 @@ function greet(name) {
 greet('Alex');
 greet(null);
 greet(undefined);
-function printUser(user) {
-    console.log(`User name: ${user.name}`);
-    console.log(`User age: ${user.age}`);
-}
-printUser({ name: 'Yuliia', age: 70 });
 let value = null;
 console.log(value);
 value = { key1: 'one' };
@@ -35,3 +30,31 @@ outcome = 'Result';
 if (typeof outcome === 'string') {
     console.log(outcome.toUpperCase());
 }
+function printUser(user) {
+    console.log(`User name: ${user.name}`);
+    console.log(`User age: ${user.age}`);
+}
+printUser({ name: 'Yuliia', age: 70 });
+const person = {
+    name: 'Anna',
+    age: 45,
+    hobbies: ['programming', 'sport']
+};
+console.log(`Hi, ${person.name}. You are ${person.age}. Your hobbies: ${person.hobbies}`);
+const sum = (num1, num2) => {
+    return num1 + num2;
+};
+console.log(`Results of sun fn: ${sum(10, 20)}`);
+var DayOfWeek;
+(function (DayOfWeek) {
+    DayOfWeek[DayOfWeek["Sunday"] = 0] = "Sunday";
+    DayOfWeek[DayOfWeek["Monday"] = 1] = "Monday";
+    DayOfWeek[DayOfWeek["Tuesday"] = 2] = "Tuesday";
+    DayOfWeek[DayOfWeek["Wednesday"] = 3] = "Wednesday";
+    DayOfWeek[DayOfWeek["Thursday"] = 4] = "Thursday";
+    DayOfWeek[DayOfWeek["Friday"] = 5] = "Friday";
+    DayOfWeek[DayOfWeek["Saturday"] = 6] = "Saturday";
+})(DayOfWeek || (DayOfWeek = {}));
+const date = new Date();
+const currentDay = DayOfWeek[date.getDay()];
+console.log(`Today is ${currentDay}`);
