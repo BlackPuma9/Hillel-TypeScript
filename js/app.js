@@ -10,9 +10,9 @@ const show = function () {
 };
 show();
 // const error = function (): never {
-//     throw new TypeError('This is an error')
-// }
-// error()
+//   throw new TypeError('This is an error');
+// };
+// error();
 function greet(name) {
     name ? console.log(`Hello, ${name}!`) : console.log('Hello, stranger!');
 }
@@ -27,7 +27,7 @@ value = 2;
 console.log(value);
 let outcome;
 outcome = 'Result';
-outcome = 45;
+// outcome = 45;
 if (typeof outcome === 'string') {
     console.log(outcome.toUpperCase());
 }
@@ -41,7 +41,7 @@ const person = {
     age: 45,
     hobbies: ['programming', 'sport'],
 };
-console.log(`Hi, ${person.name}. You are ${person.age}. Your hobbies: ${person.hobbies}`);
+console.log(`Hi, ${person.name}. You are ${person.age}. Your hobby: ${person.hobbies[0]}`);
 const sum = (num1, num2) => {
     return num1 + num2;
 };
@@ -59,3 +59,4 @@ var DayOfWeek;
 const date = new Date();
 const currentDay = DayOfWeek[date.getDay()];
 console.log(`Today is ${currentDay}`);
+//# sourceMappingURL=app.js.map

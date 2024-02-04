@@ -12,9 +12,9 @@ const show = function (): void {
 show();
 
 // const error = function (): never {
-//     throw new TypeError('This is an error')
-// }
-// error()
+//   throw new TypeError('This is an error');
+// };
+// error();
 function greet(name?: string | null | undefined): void {
   name ? console.log(`Hello, ${name}!`) : console.log('Hello, stranger!');
 }
@@ -30,7 +30,7 @@ value = 2;
 console.log(value);
 let outcome: unknown;
 outcome = 'Result';
-outcome = 45;
+// outcome = 45;
 if (typeof outcome === 'string') {
   console.log(outcome.toUpperCase());
 }
@@ -44,7 +44,7 @@ printUser({ name: 'Yuliia', age: 70 });
 interface Person {
   name: string;
   age: number;
-  hobbies: Array<string>;
+  hobbies: string[];
 }
 
 const person: Person = {
@@ -53,7 +53,7 @@ const person: Person = {
   hobbies: ['programming', 'sport'],
 };
 
-console.log(`Hi, ${person.name}. You are ${person.age}. Your hobbies: ${person.hobbies}`);
+console.log(`Hi, ${person.name}. You are ${person.age}. Your hobby: ${person.hobbies[0]}`);
 
 const sum = (num1: number, num2: number): number => {
   return num1 + num2;
