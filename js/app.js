@@ -27,6 +27,7 @@ value = 2;
 console.log(value);
 let outcome;
 outcome = 'Result';
+outcome = 45;
 if (typeof outcome === 'string') {
     console.log(outcome.toUpperCase());
 }
@@ -38,7 +39,7 @@ printUser({ name: 'Yuliia', age: 70 });
 const person = {
     name: 'Anna',
     age: 45,
-    hobbies: ['programming', 'sport']
+    hobbies: ['programming', 'sport'],
 };
 console.log(`Hi, ${person.name}. You are ${person.age}. Your hobbies: ${person.hobbies}`);
 const sum = (num1, num2) => {
