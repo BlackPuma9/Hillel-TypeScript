@@ -1,17 +1,15 @@
-class Book {
-  constructor(
-    public title: string,
-    public author: string,
-    public publishedYear: number,
-  ) {}
-  getInfo(): string {
-    return `${this.author}, ${this.title}, ${this.publishedYear}`;
-  }
-}
+import { Book } from './modules/Book';
+import { calculation } from './modules/func';
+import { User } from './modules/User';
 
 const book1 = new Book('JSScript', 'David Flanagan', 2018);
 console.log(book1.getInfo());
 
+console.log(calculation(9));
+console.log(calculation('Hello Dear'));
+
+const user = new User('Sheva', 'Anna', '456789');
+console.log(user.getUserInfo());
 function returnLastElement<Type>(arg: Array<Type>): Type | undefined {
   return arg[arg.length - 1];
 }
@@ -24,14 +22,3 @@ console.log(
     { name: 'Ivan', year: 2000 },
   ]),
 );
-
-function calculation(value: string | number): number {
-  if (typeof value === 'string') {
-    return value.length;
-  } else {
-    return value * value;
-  }
-}
-
-console.log(calculation(4));
-console.log(calculation('Hello Dear'));

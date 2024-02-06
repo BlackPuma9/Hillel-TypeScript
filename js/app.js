@@ -1,16 +1,14 @@
 "use strict";
-class Book {
-    constructor(title, author, publishedYear) {
-        this.title = title;
-        this.author = author;
-        this.publishedYear = publishedYear;
-    }
-    getInfo() {
-        return `${this.author}, ${this.title}, ${this.publishedYear}`;
-    }
-}
-const book1 = new Book('JSScript', 'David Flanagan', 2018);
+Object.defineProperty(exports, "__esModule", { value: true });
+const Book_1 = require("./modules/Book");
+const func_1 = require("./modules/func");
+const User_1 = require("./modules/User");
+const book1 = new Book_1.Book('JSScript', 'David Flanagan', 2018);
 console.log(book1.getInfo());
+console.log((0, func_1.calculation)(9));
+console.log((0, func_1.calculation)('Hello Dear'));
+const user = new User_1.User('Sheva', 'Anna', '456789');
+console.log(user.getUserInfo());
 function returnLastElement(arg) {
     return arg[arg.length - 1];
 }
@@ -20,14 +18,4 @@ console.log(returnLastElement([
     { name: 'Inna', year: 2019 },
     { name: 'Ivan', year: 2000 },
 ]));
-function calculation(value) {
-    if (typeof value === 'string') {
-        return value.length;
-    }
-    else {
-        return value * value;
-    }
-}
-console.log(calculation(4));
-console.log(calculation('Hello Dear'));
 //# sourceMappingURL=app.js.map
